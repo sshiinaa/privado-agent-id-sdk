@@ -1,0 +1,31 @@
+{
+  "name": "privado-langchain-plugin",
+  "version": "1.0.0",
+  "description": "A LangChain plugin for Privado ID integration with Lit Protocol",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint src --ext .js"
+  },
+  "keywords": [
+    "langchain",
+    "privado",
+    "lit-protocol",
+    "did",
+    "blockchain"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@langchain/core": "^0.1.0",
+    "@lit-protocol/lit-node-client": "^2.0.0",
+    "ethers": "^6.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.0.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.0.0"
+  }
+}
