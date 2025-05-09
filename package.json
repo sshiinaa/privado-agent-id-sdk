@@ -1,59 +1,40 @@
 {
-  "name": "@privado/privado-langchain-sdk",
+  "name": "@privado-langchain-sdk/agent-id-sdk",
   "version": "1.0.0",
-  "description": "Privado SDK for LangChain integration with Lit Protocol",
+  "description": "A SDK for signing and verifying AI agent responses using Lit Protocol",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "README.md"
-  ],
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "lint": "eslint src --ext .ts",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint",
-    "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags"
+    "prepare": "npm run build"
   },
   "keywords": [
+    "ai",
     "langchain",
-    "privado",
     "lit-protocol",
-    "did",
-    "blockchain",
-    "sdk"
+    "ethereum",
+    "signature",
+    "verification"
   ],
-  "author": "Privado",
+  "author": "Your Name",
   "license": "MIT",
   "dependencies": {
     "@langchain/core": "^0.1.0",
     "@lit-protocol/lit-node-client": "^2.0.0",
     "ethers": "^6.0.0",
+    "dotenv": "^16.0.0",
     "langchain": "^0.1.0"
   },
   "devDependencies": {
-    "@types/jest": "^29.0.0",
-    "@types/node": "^18.0.0",
-    "jest": "^29.0.0",
-    "ts-jest": "^29.0.0",
+    "@types/node": "^20.0.0",
     "typescript": "^5.0.0",
-    "eslint": "^8.0.0",
-    "eslint-config-prettier": "^8.0.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.0.0"
+    "jest": "^29.0.0",
+    "@types/jest": "^29.0.0"
   },
-  "peerDependencies": {
-    "@langchain/core": "^0.1.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sshiinaa/privado-agent-id-sdk.git"
-  },
-  "bugs": {
-    "url": "https://github.com/sshiinaa/privado-agent-id-sdk/issues"
-  },
-  "homepage": "https://github.com/sshiinaa/privado-agent-id-sdk#readme"
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
 }

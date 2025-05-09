@@ -1,6 +1,6 @@
 const { PrivadoCallback, createPrivadoCallback } = require('../src');
 
-// Mock implementation of LitNodeClient
+// Mock LitNodeClient
 jest.mock('@lit-protocol/lit-node-client', () => ({
     LitNodeClient: jest.fn().mockImplementation(() => ({
         connect: jest.fn().mockResolvedValue(true)
@@ -11,7 +11,7 @@ describe('PrivadoCallback', () => {
     let privadoCallback;
     const mockConfig = {
         litPkpPublicKey: '0x1234567890abcdef',
-        ethereumPrivateKey: '0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef' // Valid Ethereum private key format
+        ethereumPrivateKey: '0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef'
     };
 
     beforeEach(() => {
@@ -29,7 +29,7 @@ describe('PrivadoCallback', () => {
             }
         };
 
-        // Mock the signMessage method
+        // Mock signMessage method
         privadoCallback.signMessage = jest.fn().mockResolvedValue({
             signedMessage: 'mocked-signature',
             did: `did:privado:${mockConfig.litPkpPublicKey}`
@@ -55,7 +55,7 @@ describe('PrivadoCallback', () => {
             }
         };
 
-        // Mock the signMessage method to throw an error
+        // Mock signMessage to throw error
         privadoCallback.signMessage = jest.fn().mockRejectedValue(new Error('Signing failed'));
 
         await privadoCallback.onAgentFinish(mockOutput);
